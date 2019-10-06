@@ -20,6 +20,9 @@
 #include "agg_bitset_iterator.h"
 #include "agg_renderer_scanline.h"
 
+#ifdef _MSC_VER
+#define strcasecmp stricmp
+#endif
 
 namespace agg {
 namespace fman {
@@ -746,7 +749,7 @@ namespace fman {
     //------------------------------------------------------------------------
 	void font_engine_freetype_base::loaded_face::set_face_name()
 	{
-		if( !stricmp(m_ft_face->style_name,"Regular") )
+		if( !strcasecmp(m_ft_face->style_name,"Regular") )
 		{
             std::size_t len=std::strlen(m_ft_face->family_name)+1;
 			m_face_name=new char[len];
