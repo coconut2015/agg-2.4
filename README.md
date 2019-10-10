@@ -20,6 +20,13 @@ Modifications
 * Simplified directory structure so that only include/ and src/ remains.
 * The file ``copying`` was renamed to ``LICENSE.txt``.
 * doc/ and some other non-essential files are removed.
+* A minor portability fix for stricmp.
 
 These changes are intended to make it easy to integrate agg source code
 into another project.
+
+Tutorials
+=========
+
+* https://coconut2015.github.io/agg-tutorial
+* https://code.google.com/archive/p/schematrix/downloads

@@ -20,10 +20,6 @@
 #include "agg_bitset_iterator.h"
 #include "agg_renderer_scanline.h"
 
-#ifdef _MSC_VER
-#define strcasecmp stricmp
-#endif
-
 namespace agg {
 namespace fman {
 
@@ -746,6 +742,10 @@ namespace fman {
 		return success;
 	}
 
+#ifdef _MSC_VER
+#define strcasecmp stricmp
+#endif
+
     //------------------------------------------------------------------------
 	void font_engine_freetype_base::loaded_face::set_face_name()
 	{
@@ -763,7 +763,9 @@ namespace fman {
 		}
 	}
 
-
+#ifdef _MSC_VER
+#undef strcasecmp
+#endif
 
 
 
